@@ -1,0 +1,12 @@
+@use '../../styles/vars' as v;
+
+@font-face {
+  font-family: "Poppins";
+  src: url("../../assets/fonts/Poppins-Medium.ttf") format("truetype");
+}
+
+.app {
+  font-family: v.$global-font;
+  min-height: 100vh;
+}
+
