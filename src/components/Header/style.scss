@@ -1,0 +1,50 @@
+@use '../../styles/vars' as v;
+
+.header {
+  width: 100%;
+  margin-top: 50px;
+  padding: 0 9%;
+  display: flex;
+  font-weight: v.$title-font-weight;
+  font-size: v.$text-font-size;
+  color: v.$color-gray;
+  &__navbar {
+    width: 100%;
+    margin-left: 45px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    & ul li {
+      display: inline-flex;
+      margin-right: 25px;
+      &:last-child {
+        margin-right: 0;
+      }
+      &:hover {
+        color: v.$color-dark-violet;
+      }
+    }
+    &--connection {
+      & a {
+        margin-right: 30px;
+        &:hover {
+          color: v.$color-dark-violet;
+        }
+      }
+      & button {
+        background: v.$color-cyan;
+        font-family: v.$global-font;
+        font-size: 14px;
+        color: white;
+        font-weight: v.$title-font-weight;
+        border: none;
+        width: 95px;
+        border-radius: 25px;
+        padding: 10px;
+        &:hover {
+          opacity: .5;
+        }
+      }
+    }
+  }
+}
