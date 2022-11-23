@@ -3,20 +3,20 @@
 .header {
   width: 100%;
   margin-top: 50px;
-  padding: 0 9%;
+  padding: 0 10%;
   display: flex;
   font-weight: v.$title-font-weight;
-  font-size: v.$text-font-size;
+  font-size: 16px;
   color: v.$color-gray;
   &__navbar {
     width: 100%;
     margin-left: 45px;
     display: flex;
     justify-content: space-between;
-    align-items: baseline;
     & ul li {
       display: inline-flex;
       margin-right: 25px;
+      padding-top: 8px;
       &:last-child {
         margin-right: 0;
       }
@@ -34,13 +34,13 @@
       & button {
         background: v.$color-cyan;
         font-family: v.$global-font;
-        font-size: 14px;
+        font-size: 13px;
         color: white;
-        font-weight: v.$title-font-weight;
+        font-weight: v.$text-font-weight;
         border: none;
         width: 95px;
         border-radius: 25px;
-        padding: 10px;
+        padding: 8px;
         &:hover {
           opacity: .5;
         }
