@@ -1,0 +1,45 @@
+@use '../../styles/vars' as v;
+
+.hero {
+  display: flex;
+  padding-left: 9%;
+  margin-top: 80px;
+  &__text {
+    width: 50%;
+    padding-top: 70px;
+    & h2 {
+      font-weight: v.$title-font-weight;
+      font-size: 68px;
+      color: v.$color-very-dark-violet;
+      line-height: 75px;
+    }
+    & p {
+      margin-top: 10px;
+      font-weight: v.$text-font-weight;
+      font-size: 20px;
+      color: v.$color-gray;
+      line-height: 30px;
+    }
+    & button {
+      margin-top: 35px;
+      background: v.$color-cyan;
+      font-family: v.$global-font;
+      font-size: 16px;
+      color: white;
+      font-weight: v.$text-font-weight;
+      border: none;
+      width: 170px;
+      border-radius: 25px;
+      padding: 10px;
+      &:hover {
+        opacity: .5;
+      }
+    }
+  }
+  &__illustration {
+    width: 50%;
+    & img {
+      width: 100%;
+    }
+  }
+}
