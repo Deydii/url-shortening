@@ -6,7 +6,10 @@ const Hero = () => {
   return (
     <div className="hero">
       <div className="hero__text">
-        <h2>More than just shorter links</h2>
+        <h2>More than just
+          <br />
+          shorter links
+        </h2>
         <p>Build your brand's recognition and get detailed
           <br />
           insights on how your links are performing.
@@ -16,7 +19,6 @@ const Hero = () => {
       <div className="hero__illustration">
         <img src={illustration} alt="illustration of a woman working" />
       </div>
-
     </div>
   )
 };

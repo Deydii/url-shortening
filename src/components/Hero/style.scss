@@ -2,23 +2,23 @@
 
 .hero {
   display: flex;
-  padding-left: 9%;
-  margin-top: 80px;
+  padding-left: 10%;
+  margin-top: 4%;
   &__text {
     width: 50%;
     padding-top: 70px;
     & h2 {
       font-weight: v.$title-font-weight;
-      font-size: 68px;
+      font-size: clamp(50px, 4.4vw, 80px);
       color: v.$color-very-dark-violet;
-      line-height: 75px;
+      line-height: 85px;
     }
     & p {
       margin-top: 10px;
       font-weight: v.$text-font-weight;
-      font-size: 20px;
+      font-size: 22px;
       color: v.$color-gray;
-      line-height: 30px;
+      line-height: 40px;
     }
     & button {
       margin-top: 35px;
@@ -31,6 +31,7 @@
       width: 170px;
       border-radius: 25px;
       padding: 10px;
+      margin-bottom: 200px;
       &:hover {
         opacity: .5;
       }
@@ -39,7 +40,7 @@
   &__illustration {
     width: 50%;
     & img {
-      width: 100%;
+      padding-left: 10%;
     }
   }
 }
