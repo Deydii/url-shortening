@@ -1,0 +1,39 @@
+@use '../../styles/vars' as v;
+
+.form {
+  position: relative;
+  z-index: 2;
+  margin: 0 12%;
+  height: 135px;
+  padding: 40px 0;
+  background: v.$color-dark-violet url('../../assets/images/bg-shorten-desktop.svg') no-repeat top right / cover;
+  border-radius: 10px;
+  &__input {
+    margin-left: 65px;
+    padding-left: 30px;
+    width: 70%;
+    height: 55px;
+    color: v.$color-very-dark-violet;
+    font-size: v.$text-font-size;
+    border: none;
+    border-radius: 8px;
+    &::placeholder {
+      font-size: v.$text-font-size;
+      color: v.$color-gray;
+    }
+  }
+  & button {
+    margin-left: 30px;
+    background: v.$color-cyan;
+    font-size: 18px;
+    color: white;
+    font-weight: v.$text-font-weight;
+    border: none;
+    width: 180px;
+    height: 55px;
+    border-radius: 8px;
+    &:hover {
+      opacity: .5;
+    }
+  }
+}

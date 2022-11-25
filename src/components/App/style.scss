@@ -14,8 +14,11 @@
 	font-style: normal;
 }
 
+* {
+  font-family: v.$global-font !important;
+}
+
 .app {
-  font-family: v.$global-font;
   min-height: 100vh;
   overflow: hidden;
 }

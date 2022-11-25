@@ -1,5 +1,6 @@
 import Header from '../Header';
 import Hero from '../Hero';
+import LinkForm from '../LinkForm';
 
 import './style.scss';
 
@@ -8,6 +9,7 @@ const App = () => {
     <div className="app">
       <Header />
       <Hero />
+      <LinkForm />
     </div>
   );
 }
