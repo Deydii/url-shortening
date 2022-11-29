@@ -1,6 +1,6 @@
 import Header from '../Header';
 import Hero from '../Hero';
-import LinkForm from '../LinkForm';
+import LinkForm from '../ShortenedLinks/LinkForm';
 
 import './style.scss';
 
