@@ -1,0 +1,19 @@
+@use '../../styles/vars' as v;
+
+.features {
+  background: #EEF1F6;
+  text-align: center;
+  padding: 8% 12% 5%;
+  &__title {
+    font-weight: v.$title-font-weight;
+    font-size: 40px;
+    color: v.$color-very-dark-violet;
+    margin-bottom: 25px;
+  }
+  &__text{
+    color: #9E99A8;
+    font-size: 20px;
+    font-weight: v.$text-font-weight;
+    line-height: 30px;
+  }
+}

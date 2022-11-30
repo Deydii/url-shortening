@@ -1,0 +1,61 @@
+@use '../../../styles/vars' as v;
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 40vh;
+  margin-top: 100px;
+  &__section {
+    margin: 0 20px;
+    position: relative;
+    width: 340px;
+    height: 230px;
+    background: white;
+    border-radius: 6px;
+    text-align: left;
+    padding: 0 3% 21%;
+    &:nth-child(2){
+      align-self: center;
+    }
+    &:nth-child(3){
+      align-self: flex-end;
+    }
+    &:not(:last-child):after {
+      display: block;
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: -40px;
+      width: 40px;
+      height: 9px;
+      background: v.$color-cyan;
+    }
+  }
+  &__icon {
+    background: v.$color-dark-violet;
+    padding: 7%;
+    border-radius: 50%;
+    position: absolute;
+    top: -17%;
+    left: 8%;
+    text-align: center;
+    & img {
+      width: 90%;
+      height: 90%;
+    }
+  }
+  &__title {
+    margin-top: 35%;
+    color: v.$color-dark-violet;
+    font-size: 20px;
+    font-weight: v.$title-font-weight;
+  }
+  &__text {
+    margin-top: 15px;
+    font-size: 14.5px;
+    color: v.$color-gray;
+    font-weight: v.$text-font-weight;
+    line-height: 22px;
+  }
+}
