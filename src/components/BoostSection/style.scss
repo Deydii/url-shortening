@@ -1,0 +1,30 @@
+@use '../../styles/vars' as v;
+
+.boost {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: v.$color-dark-violet url('../../assets/images/bg-boost-desktop.svg') no-repeat top right / cover;
+  height: 230px;
+  &__title {
+    color: white;
+    font-size: 38px;
+    font-weight: v.$title-font-weight;
+  }
+  & button {
+    margin-top: 30px;
+    background: v.$color-cyan;
+    font-family: v.$global-font;
+    font-size: 20px;
+    color: white;
+    font-weight: v.$text-font-weight;
+    border: none;
+    width: 180px;
+    border-radius: 25px;
+    padding: 11px;
+  &:hover {
+    background: #9BE3E2;
+  }
+ }
+}

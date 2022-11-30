@@ -2,6 +2,7 @@ import Header from '../Header';
 import Hero from '../Hero';
 import LinkForm from '../ShortenedLinks/LinkForm';
 import Features from '../Features';
+import CtaSection from '../BoostSection';
 
 import './style.scss';
 
@@ -12,6 +13,7 @@ const App = () => {
       <Hero />
       <LinkForm />
       <Features />
+      <CtaSection />
     </div>
   );
 }
