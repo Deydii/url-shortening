@@ -1,4 +1,5 @@
 @use '../../styles/vars' as v;
+@use "../../styles/mixins" as m;
 
 .header {
   width: 100%;
@@ -6,13 +7,46 @@
   padding: 0 12%;
   display: flex;
   font-weight: v.$title-font-weight;
-  font-size: 16px;
+  font-size: v.$text-font-size;
   color: v.$color-gray;
+  @include m.breakpoint(tablet) {
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    font-size: 18px;
+  }
+  @include m.breakpoint(mobile) {
+    font-size: 16px;
+  }
+
+  // burger menu 
+  &__burger {
+    display: none;
+    border: none;
+    background: none;
+    @include m.breakpoint(tablet) {
+      display: block;
+    }
+    & div {
+      @include m.breakpoint(tablet) {
+        display: block;
+        width: 25px;
+        height: 3px;
+        margin-bottom: 5px;
+        background: v.$color-gray;
+        border-radius: 3px;
+      }
+    }
+  }
   &__navbar {
     width: 100%;
     margin-left: 45px;
     display: flex;
     justify-content: space-between;
+    @include m.breakpoint(tablet) {
+      display: none;
+    }
     & ul li {
       display: inline-flex;
       margin-right: 25px;
@@ -24,26 +58,75 @@
         color: v.$color-dark-violet;
       }
     }
-    &--connection {
-      & a {
-        margin-right: 30px;
-        &:hover {
-          color: v.$color-dark-violet;
+
+    // navbar on mobile and tablet
+    &--responsive {
+      @include m.breakpoint(tablet) {
+        width: 45%;
+        position: absolute;
+        z-index: 1;
+        top: 60px;
+        left: 31%;
+        margin-left: 0;
+        background: v.$color-dark-violet;
+        border-radius: 10px;
+      }
+      @include m.breakpoint(mobile) {
+        width: 75%;
+        left: auto;
+      }
+      
+      & ul li {
+        @include m.breakpoint(tablet) {
+          display: block;
+          text-align: center;
+          margin: 45px 0;
+        }
+        @include m.breakpoint(mobile) {
+          margin: 30px 0;
         }
       }
-      & button {
-        background: v.$color-cyan;
-        font-family: v.$global-font;
-        font-size: 13px;
-        color: white;
-        font-weight: v.$text-font-weight;
-        border: none;
-        width: 95px;
-        border-radius: 25px;
-        padding: 8px;
-        &:hover {
-          opacity: .5;
-        }
+    }
+  }
+
+  &__connection {
+    @include m.breakpoint(tablet) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      margin-bottom: 35px;
+    }
+    & a {
+      margin-right: 30px;
+      border-top: none;
+      &:hover {
+        color: v.$color-dark-violet;
+      }
+      @include m.breakpoint(tablet) {
+        width: 80%;
+        margin: 0 0 25px 0;
+        padding-top: 30px;
+        border-top: thin hsl(257, 7%, 63%, .5) solid;
+        text-align: center;
+      }
+    }
+    & button {
+      background: v.$color-cyan;
+      font-family: v.$global-font;
+      font-size: 13px;
+      color: white;
+      font-weight: v.$text-font-weight;
+      border: none;
+      width: 95px;
+      border-radius: 25px;
+      padding: 8px;
+      &:hover {
+        opacity: .5;
+      }
+      @include m.breakpoint(tablet) {
+        width: 80%;
+        font-size: 15px;
       }
     }
   }
