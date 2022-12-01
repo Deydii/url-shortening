@@ -2,15 +2,15 @@
 
 .content {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: flex-start;
-  height: 40vh;
+  height: 45vh;
   margin-top: 100px;
   &__section {
-    margin: 0 20px;
+    margin-right: 20px;
     position: relative;
-    width: 340px;
-    height: 230px;
+    width: 375px;
+    height: 275px;
     background: white;
     border-radius: 6px;
     text-align: left;
@@ -46,16 +46,16 @@
     }
   }
   &__title {
-    margin-top: 35%;
+    margin-top: 32%;
     color: v.$color-dark-violet;
     font-size: 20px;
     font-weight: v.$title-font-weight;
   }
   &__text {
     margin-top: 15px;
-    font-size: 14.5px;
+    font-size: 16px;
     color: v.$color-gray;
     font-weight: v.$text-font-weight;
-    line-height: 22px;
+    line-height: 25px;
   }
 }
