@@ -1,0 +1,21 @@
+@use '../../../styles/vars' as v;
+
+.links {
+  display: flex;
+  align-items: flex-start;
+  padding-left: 23%;
+  font-size: v.$text-font-size;
+  font-weight: v.$text-font-weight;
+  & ul li {
+    color: v.$color-gray;
+    line-height: 35px;
+    margin-right: 100px;
+    &:hover {
+      color: v.$color-cyan;
+    }
+    &:first-child {
+      color: white;
+      margin-bottom: 20px;
+    }
+  }
+}

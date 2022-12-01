@@ -1,0 +1,14 @@
+@use '../../styles/vars' as v;
+
+.footer {
+  padding: 4% 12%;
+  background: v.$color-very-dark-violet;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  &__logo {
+    & img {
+      filter: brightness(0) invert(1);
+    }
+  }
+}
