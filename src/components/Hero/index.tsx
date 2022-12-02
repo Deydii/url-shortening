@@ -6,12 +6,8 @@ const Hero = () => {
   return (
     <div className="hero">
       <div className="hero__text">
-        <h2>More than just
-          <br />
-          shorter links
-        </h2>
+        <h2>More than just shorter links</h2>
         <p>Build your brand's recognition and get detailed
-          <br />
           insights on how your links are performing.
         </p>
         <button type="button">Get Started</button>

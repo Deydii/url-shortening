@@ -1,24 +1,51 @@
 @use '../../styles/vars' as v;
+@use '../../styles/mixins' as m;
 
 .hero {
   display: flex;
   padding-left: 12%;
   margin-top: 4%;
+  @include m.breakpoint(tablet) {
+    flex-direction: column-reverse;
+    padding-left: 0;
+  }
   &__text {
     width: 50%;
     padding-top: 70px;
+    @include m.breakpoint(tablet) {
+      padding-top: 15px;
+      width: 100%;
+      margin: 0 auto;
+      text-align: center;
+    }
+    @include m.breakpoint(mobile) {
+      width: 90%;
+      padding-top: 20px;
+    }
     & h2 {
       font-weight: v.$title-font-weight;
-      font-size: clamp(50px, 4.4vw, 80px);
+      font-size: clamp(40px, 4.4vw, 80px);
       color: v.$color-very-dark-violet;
       line-height: 85px;
+      @include m.breakpoint(mobile) {
+        line-height: 45px;
+      }
     }
     & p {
+      width: 80%;
       margin-top: 10px;
       font-weight: v.$text-font-weight;
-      font-size: 22px;
+      font-size: 21px;
       color: v.$color-gray;
       line-height: 40px;
+      @include m.breakpoint(tablet) {
+        margin: 5px auto 0;
+      }
+      @include m.breakpoint(mobile) {
+        width: 90%;
+        font-size: 17px;
+        line-height: 35px;
+      }
     }
     & button {
       margin-top: 35px;
@@ -35,12 +62,32 @@
       &:hover {
         opacity: .5;
       }
+      @include m.breakpoint(tablet) {
+        margin-top: 25px;
+        width: 190px;
+        padding: 12px;
+        font-size: 18px;
+        margin-bottom: 80px;
+      }
     }
   }
   &__illustration {
     width: 50%;
+    @include m.breakpoint(tablet) {
+      width: 100%;
+      padding: 4%;
+      text-align: center;
+    }
     & img {
       padding-left: 10%;
+      @include m.breakpoint(tablet) {
+        padding-left: 0;
+        width: 75vw;
+      }
+      @include m.breakpoint(mobile) {
+        width: 135vw;
+        padding-left: 0;
+      }
     }
   }
 }
