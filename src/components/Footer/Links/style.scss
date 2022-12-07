@@ -1,4 +1,5 @@
 @use '../../../styles/vars' as v;
+@use '../../../styles/mixins' as m;
 
 .links {
   display: flex;
@@ -6,7 +7,26 @@
   padding-left: 23%;
   font-size: v.$text-font-size;
   font-weight: v.$text-font-weight;
-  & ul li {
+  @include m.breakpoint(tablet) {
+    width: 100%;
+    justify-content: center;
+    padding: 0;
+    margin-top: 50px;
+  }
+  @include m.breakpoint(mobile) {
+    flex-direction: column;
+    align-items: center;
+    font-size: 16px;
+  }
+  & ul {
+    @include m.breakpoint(tablet) {
+      margin-bottom: 45px;
+    }
+    @include m.breakpoint(mobile) {
+      margin-bottom: 30px;
+    }
+  }
+   & ul li {
     color: v.$color-gray;
     line-height: 35px;
     margin-right: 100px;
@@ -16,6 +36,15 @@
     &:first-child {
       color: white;
       margin-bottom: 20px;
+      @include m.breakpoint(tablet) {
+        margin-bottom: 15px;
+      }
+    }
+    @include m.breakpoint(tablet) {
+      margin-right: 85px;
+    }
+    @include m.breakpoint(mobile) {
+      margin: 0;
     }
   }
 }

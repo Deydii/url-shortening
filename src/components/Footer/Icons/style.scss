@@ -1,10 +1,14 @@
 @use '../../../styles/vars' as v;
+@use '../../../styles/mixins' as m;
 
 .icons {
   display: flex;
   align-items: center;
   & a:not(:last-child) {
     margin-right: 25px;
+  }
+  @include m.breakpoint(mobile) {
+    margin-top: 10px;
   }
   & img {
     &:hover {
