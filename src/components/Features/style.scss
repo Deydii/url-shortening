@@ -5,6 +5,9 @@
   background: #EEF1F6;
   text-align: center;
   padding: 8% 12% 7%;
+  @include m.breakpoint(large-desktop) {
+    padding: 8% 20% 7%;
+  }
   @include m.breakpoint(tablet) {
     padding: 17% 6% 15%;
   }

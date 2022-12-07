@@ -48,9 +48,17 @@
       width: 40px;
       height: 9px;
       background: v.$color-cyan;
+      @include m.breakpoint(large-desktop) {
+        right: -45px;
+        width: 45px;
+      }
       @include m.breakpoint(tablet) {
         display: none;
       }
+    }
+    @include m.breakpoint(large-desktop) {
+      width: 31%;
+      padding: 0 3% 25%;
     }
     @include m.breakpoint(tablet) {
       text-align: center;
@@ -93,6 +101,9 @@
     color: v.$color-dark-violet;
     font-size: 20px;
     font-weight: v.$title-font-weight;
+    @include m.breakpoint(large-desktop) {
+      font-size: 25px;
+    }
     @include m.breakpoint(tablet) {
       margin-top: 18%;
     }
@@ -106,6 +117,11 @@
     color: v.$color-gray;
     font-weight: v.$text-font-weight;
     line-height: 25px;
+    @include m.breakpoint(large-desktop) {
+      margin-top: 20px;
+      font-size: 18px;
+      line-height: 30px;
+    }
     @include m.breakpoint(mobile) {
       font-size: 15px;
     }

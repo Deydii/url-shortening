@@ -10,6 +10,9 @@
   padding: 40px 0;
   background: v.$color-dark-violet url('../../../assets/images/bg-shorten-desktop.svg') no-repeat top right / cover ;
   border-radius: 10px;
+  @include m.breakpoint(large-desktop) {
+    margin: 0 20%;
+  }
   @include m.breakpoint(tablet) {
     display: flex;
     flex-direction: column;

@@ -8,6 +8,9 @@
   justify-content: center;
   background: v.$color-dark-violet url('../../assets/images/bg-boost-desktop.svg') no-repeat top right / cover;
   height: 230px;
+  @include m.breakpoint(large-desktop) {
+    padding: 6%;
+  }
   @include m.breakpoint(mobile) {
     background: v.$color-dark-violet url('../../assets/images/bg-boost-mobile.svg') no-repeat top right / cover;
     height: 300px;

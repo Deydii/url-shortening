@@ -9,6 +9,9 @@
   font-weight: v.$title-font-weight;
   font-size: v.$text-font-size;
   color: v.$color-gray;
+  @include m.breakpoint(large-desktop) {
+    padding: 0 20%;
+  }
   @include m.breakpoint(tablet) {
     position: relative;
     justify-content: space-between;
@@ -123,6 +126,9 @@
       padding: 8px;
       &:hover {
         opacity: .5;
+      }
+      @include m.breakpoint(large-desktop) {
+        font-size: 16px;
       }
       @include m.breakpoint(tablet) {
         width: 80%;

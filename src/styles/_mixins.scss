@@ -15,7 +15,7 @@
   }
 
   @if $device == large-desktop{
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: 1700px) {
         @content;
     } 
   }

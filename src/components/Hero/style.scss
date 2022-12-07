@@ -5,6 +5,9 @@
   display: flex;
   padding-left: 12%;
   margin-top: 4%;
+  @include m.breakpoint(large-desktop) {
+    padding-left: 20%;
+  }
   @include m.breakpoint(tablet) {
     flex-direction: column-reverse;
     padding-left: 0;
@@ -62,6 +65,9 @@
       &:hover {
         opacity: .5;
       }
+      @include m.breakpoint(large-desktop) {
+        font-size: 19px;
+      }
       @include m.breakpoint(tablet) {
         margin-top: 25px;
         width: 190px;
@@ -80,6 +86,9 @@
     }
     & img {
       padding-left: 10%;
+      @include m.breakpoint(large-desktop) {
+        padding: 0;
+      }
       @include m.breakpoint(tablet) {
         padding-left: 0;
         width: 75vw;
