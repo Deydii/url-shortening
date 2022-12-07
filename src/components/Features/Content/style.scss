@@ -1,11 +1,29 @@
 @use '../../../styles/vars' as v;
+@use '../../../styles/mixins' as m;
 
 .content {
+  position: relative;
+  z-index: 3;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  height: 45vh;
+  min-height: 45vh;
   margin-top: 100px;
+  @include m.breakpoint(tablet) {
+    flex-direction: column;
+    justify-content: center;
+    height: auto;
+    &::after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      width: 9px;
+      height: 100%;
+      left: 50%;
+      transform: translate(-50%);
+      background: v.$color-cyan;
+    }
+  }
   &__section {
     margin-right: 20px;
     position: relative;
@@ -30,6 +48,23 @@
       width: 40px;
       height: 9px;
       background: v.$color-cyan;
+      @include m.breakpoint(tablet) {
+        display: none;
+      }
+    }
+    @include m.breakpoint(tablet) {
+      text-align: center;
+      width: 80%;
+      height: 230px;
+      padding: 0 10% 0%;
+      margin: 0 auto 99.9px;
+      &:last-child {
+        margin: 0 auto 0;
+      }
+    }
+    @include m.breakpoint(mobile) {
+      width: 100%;
+      height: 265px;
     }
   }
   &__icon {
@@ -40,6 +75,14 @@
     top: -17%;
     left: 8%;
     text-align: center;
+    @include m.breakpoint(tablet){
+      left: 50%;
+      transform: translate(-50%);
+      padding: 4%;
+    }
+    @include m.breakpoint(mobile) {
+      padding: 7%;
+    }
     & img {
       width: 90%;
       height: 90%;
@@ -50,6 +93,12 @@
     color: v.$color-dark-violet;
     font-size: 20px;
     font-weight: v.$title-font-weight;
+    @include m.breakpoint(tablet) {
+      margin-top: 18%;
+    }
+    @include m.breakpoint(mobile) {
+      margin-top: 28%;
+    }
   }
   &__text {
     margin-top: 15px;
@@ -57,5 +106,8 @@
     color: v.$color-gray;
     font-weight: v.$text-font-weight;
     line-height: 25px;
+    @include m.breakpoint(mobile) {
+      font-size: 15px;
+    }
   }
 }
