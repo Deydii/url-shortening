@@ -1,5 +1,5 @@
-@use '../../../styles/vars' as v;
-@use '../../../styles/mixins' as m;
+@use '../../styles/vars' as v;
+@use '../../styles/mixins' as m;
 
 .link {
   position: relative;
@@ -8,7 +8,7 @@
   margin: 0 12%;
   height: 135px;
   padding: 40px 0;
-  background: v.$color-dark-violet url('../../../assets/images/bg-shorten-desktop.svg') no-repeat top right / cover ;
+  background: v.$color-dark-violet url('../../assets/images/bg-shorten-desktop.svg') no-repeat top right / cover ;
   border-radius: 10px;
   @include m.breakpoint(large-desktop) {
     margin: 0 20%;
@@ -17,7 +17,7 @@
     display: flex;
     flex-direction: column;
     padding: 20px 0;
-    background: v.$color-dark-violet url('../../../assets/images/bg-shorten-mobile.svg') no-repeat top right/ contain;
+    background: v.$color-dark-violet url('../../assets/images/bg-shorten-mobile.svg') no-repeat top right/ contain;
   }
   &::after {
     display: block;
