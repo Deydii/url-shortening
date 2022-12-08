@@ -1,6 +1,6 @@
 import Header from '../Header';
 import Hero from '../Hero';
-import LinkForm from '../ShortenedLinks/LinkForm';
+import LinkForm from '../ShortenedLinks';
 import Features from '../Features';
 import BoostSection from '../BoostSection';
 import Footer from '../Footer';
