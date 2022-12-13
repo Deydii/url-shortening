@@ -1,0 +1,36 @@
+@use '../../../styles/vars' as v;
+
+.links-infos {
+  margin: 25px 12% 0;
+  border-radius: 4px;
+  &__section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 21px;
+    background: white;
+    color: v.$color-very-dark-blue;
+    font-size: 20px;
+    & div {
+      display: flex;
+      align-items: center;
+      & p {
+        color: v.$color-cyan;
+        margin-right: 20px;
+      }
+      & button {
+        background: v.$color-cyan;
+        font-size: 1px;
+        color: white;
+        font-size: v.$text-font-size;
+        border: none;
+        width: 100px;
+        height: 40px;
+        border-radius: 8px;
+        &:hover {
+          background: #9BE3E2;
+        }
+      }
+    }
+  }
+}

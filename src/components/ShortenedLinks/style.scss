@@ -77,4 +77,14 @@
     }
   }
  }
+ &__loading {
+  text-align: center;
+  margin-top: 3%;
+  font-size: 22px;
+  font-weight: v.$text-font-weight;
+  @include m.breakpoint(mobile) {
+    margin-top: 7%;
+    font-size: 20px;
+  }
+ }
 }
