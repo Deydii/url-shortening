@@ -33,7 +33,14 @@ const LinkForm = () => {
 
   const saveLinksInLocalStorage = () => {
     localStorage.setItem("links", JSON.stringify(links));
-  }
+  };
+
+  useEffect(() => {
+    const linksLocalStorage = localStorage.getItem('links');
+    if (linksLocalStorage) {
+      setLinks(JSON.parse(linksLocalStorage));
+    }
+  }, [])
 
   useEffect(() => {
     if (data) {
@@ -63,6 +70,19 @@ const LinkForm = () => {
         <button type="submit">Shorten It!</button>
       </form>
       {isLoading && <p className="link__loading">Loading...</p>}
+       {!isLoading && links && (
+        <>
+        {links.map(link => {
+          return (
+            <Links
+              key={link.result.code}
+              originalLink={link.result.original_link}
+              shortLink={link.result.full_short_link}
+            />
+          )
+        })}
+        </>
+      )}
     </div>
   )
 };
