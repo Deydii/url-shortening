@@ -1,6 +1,7 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useQuery } from 'react-query';
 import { loadData } from '../Api';
+import { Results } from '../../interfaces/results';
 import Links from './Links';
 
 import './style.scss';
@@ -8,14 +9,15 @@ import './style.scss';
 const LinkForm = () => {
 
   const [inputValue, setInputValue] = useState("");
+  const [links, setLinks] = useState<Results[]>([]);
 
   const baseUrl = "https://api.shrtco.de/v2/shorten?url=";
 
   const handleOnChange = (e: React.ChangeEvent<HTMLInputElement>): void => setInputValue(e.target.value);
 
-  const { isLoading, error, data, refetch } = useQuery('shortenedLink',() => loadData(`${baseUrl}${inputValue}`),
+  const { isLoading, error, data, refetch } = useQuery('shortenedLink', () => loadData(`${baseUrl}${inputValue}`), 
     {
-      enabled: false
+      enabled: false,
     }
   );
 
@@ -24,6 +26,26 @@ const LinkForm = () => {
     refetch();
     setInputValue("");
   };
+
+  const saveLinks = () => {
+    setLinks([...links, data]);
+  }
+
+  const saveLinksInLocalStorage = () => {
+    localStorage.setItem("links", JSON.stringify(links));
+  }
+
+  useEffect(() => {
+    if (data) {
+      saveLinks()
+    }
+  }, [data]);
+
+  useEffect(() => {
+    if (links.length) {
+      saveLinksInLocalStorage()
+    }
+  }, [links]);
 
   return (
     <div className="link">
@@ -41,12 +63,6 @@ const LinkForm = () => {
         <button type="submit">Shorten It!</button>
       </form>
       {isLoading && <p className="link__loading">Loading...</p>}
-      {!isLoading && data && (
-        <Links
-          originalLink={data.result.original_link}
-          shortLink={data.result.full_short_link}
-        />
-      )}
     </div>
   )
 };
