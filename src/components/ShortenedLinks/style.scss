@@ -32,6 +32,7 @@
     min-height: 150px;
   }
   &--input {
+    position: relative;
     margin-left: 65px;
     padding-left: 30px;
     width: 70%;
@@ -55,6 +56,20 @@
       font-size: 14px;
       border-radius: 3px;
     }
+    &-error {
+      border: v.$color-red 3px solid;
+      &::placeholder {
+        color: v.$color-red;
+      }
+    }
+  }
+  &--message {
+    position: absolute;
+    margin: 10px 0 0 65px;
+    color: v.$color-red;
+    font-size: 14px;
+    font-weight: v.$text-font-weight;
+    font-style: italic;
   }
   & button {
     margin-left: 30px;
@@ -77,7 +92,7 @@
     }
   }
  }
- &__loading {
+ &__message {
   text-align: center;
   margin-top: 3%;
   font-size: 22px;
@@ -85,6 +100,10 @@
   @include m.breakpoint(mobile) {
     margin-top: 7%;
     font-size: 20px;
+  }
+  &--error {
+    margin-top: 2%;
+    color: v.$color-red;
   }
  }
 }
