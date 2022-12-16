@@ -18,19 +18,21 @@
         color: v.$color-cyan;
         margin-right: 20px;
       }
-      & button {
-        background: v.$color-cyan;
-        font-size: 1px;
-        color: white;
-        font-size: v.$text-font-size;
-        border: none;
-        width: 100px;
-        height: 40px;
-        border-radius: 8px;
-        &:hover {
-          background: #9BE3E2;
-        }
-      }
+    }
+  }
+  &__button {
+    background: v.$color-cyan;
+    color: white;
+    font-size: 15px;
+    border: none;
+    width: 100px;
+    height: 40px;
+    border-radius: 8px;
+    &:hover {
+      background: #9BE3E2;
+    }
+    &-copy {
+      background: v.$color-dark-violet;
     }
   }
 }
