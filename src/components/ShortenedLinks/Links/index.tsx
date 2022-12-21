@@ -20,6 +20,7 @@ const Links = ({ originalLink, shortLink}: linkInfos) => {
     <div className="links-infos">
       <div className="links-infos__section">
         <p>{originalLink}</p>
+        <hr />
         <div>
           <p>{shortLink}</p>
           <button

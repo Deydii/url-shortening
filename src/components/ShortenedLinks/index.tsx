@@ -76,14 +76,16 @@ const LinkForm = () => {
         className="link__form"
         onSubmit={handleSubmit}
       >
-        <input
-          className={errorMessage ? "link__form--input link__form--input-error" : "link__form--input"}
-          type="text"
-          placeholder="Shorten a link here..."
-          value={inputValue}
-          onChange={handleOnChange}
-        />
-        <p className="link__form--message">{errorMessage ? "Please add a link" : ""}</p>
+        <div>
+          <input
+            className={errorMessage ? "link__form--input link__form--input-error" : "link__form--input"}
+            type="text"
+            placeholder="Shorten a link here..."
+            value={inputValue}
+            onChange={handleOnChange}
+          />
+          <p className="link__form--message">{errorMessage ? "Please add a link" : ""}</p>
+        </div>
         <button type="submit">Shorten It!</button>
       </form>
       {isLoading && <p className="link__message">Loading...</p>}
