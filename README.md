@@ -46,7 +46,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [Add live site URL here](https://deydi-url-shortening.netlify.app/)
+- Live Site URL: https://deydi-url-shortening.netlify.app/
 
 ## My process
 
