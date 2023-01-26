@@ -12,11 +12,11 @@ const LinkForm = () => {
   const [links, setLinks] = useState<Results[]>([]);
   const [errorMessage, setErrorMessage] = useState(false);
 
-  const baseUrl = "https://api.shrtco.de/v2/shorten?url=";
+  const baseUrl:string = "https://api.shrtco.de/v2/shorten?url=";
 
   const handleOnChange = (e: React.ChangeEvent<HTMLInputElement>): void => setInputValue(e.target.value);
 
-  const { isLoading, error, data, refetch } = useQuery('shortenedLink', () => loadData(`${baseUrl}${inputValue}`), 
+  const { isLoading, error, data, refetch } = useQuery<Results, Error>('shortenedLink', () => loadData(`${baseUrl}${inputValue}`), 
     {
       enabled: false,
       retry: false
@@ -34,13 +34,13 @@ const LinkForm = () => {
     }
   };
 
-  const saveLinks = () => {
-    setLinks([...links, data]);
-  }
-
-  const saveLinksInLocalStorage = () => {
-    localStorage.setItem("links", JSON.stringify(links));
+  const saveLinks = ():void => {
+    if (data) {
+      setLinks([...links, data])
+    }
   };
+
+  const saveLinksInLocalStorage = ():void => localStorage.setItem("links", JSON.stringify(links));
 
   useEffect(() => {
     if (data) {
