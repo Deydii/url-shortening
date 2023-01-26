@@ -43,13 +43,6 @@ const LinkForm = () => {
   };
 
   useEffect(() => {
-    const linksLocalStorage = localStorage.getItem('links');
-    if (linksLocalStorage) {
-      setLinks(JSON.parse(linksLocalStorage));
-    }
-  }, [])
-
-  useEffect(() => {
     if (data) {
       saveLinks()
     }
@@ -63,6 +56,13 @@ const LinkForm = () => {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [links]);
 
+  useEffect(() => {
+    const linksLocalStorage = localStorage.getItem('links');
+    if (linksLocalStorage) {
+      setLinks(JSON.parse(linksLocalStorage));
+    }
+  }, []);
+  
   // Mute console error messages
   setLogger({
     log: window.console.log,

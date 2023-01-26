@@ -22,7 +22,7 @@ const Links = ({ originalLink, shortLink}: linkInfos) => {
         <p>{originalLink}</p>
         <hr />
         <div>
-          <p>{shortLink}</p>
+          <p data-testid="shortened-link">{shortLink}</p>
           <button
             className={isCopied ? "links-infos__button links-infos__button-copy" : "links-infos__button"}
             type="button"
