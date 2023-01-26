@@ -1,46 +1,67 @@
-# Getting Started with Create React App
+# Frontend Mentor - Shortly URL shortening API Challenge solution
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a solution to the [Shortly URL shortening API Challenge challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/url-shortening-api-landing-page-2ce3ob-G). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
-## Available Scripts
+## Table of contents
 
-In the project directory, you can run:
+- [Installing](#installing)
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [Tests](#tests)
 
-### `yarn start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Installing
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+```bash
+# Clone this repository
+$ git clone https://github.com/Deydii/url-shortening.git
 
-### `yarn test`
+# Installing all the dependencies
+$ yarn
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# Run the app
+$ yarn start
+```
 
-### `yarn build`
+## Overview
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### The challenge
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Users should be able to:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- View the optimal layout for the site depending on their device's screen size
+- Shorten any valid URL
+- See a list of their shortened links, even after refreshing the browser
+- Copy the shortened link to their clipboard in a single click
+- Receive an error message when the `form` is submitted if:
+  - The `input` field is empty
 
-### `yarn eject`
+### Screenshot
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+![](./screenshot.jpg)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Links
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- Live Site URL: [Add live site URL here](https://deydi-url-shortening.netlify.app/)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## My process
 
-## Learn More
+### Built with
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- React
+- TypeScript
+- Shrtcode API
+- React Query
+- Axios
+- Sass
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Tests
+
+- Jest
+- React Testing Library
+- Mock Service Worker (MSW)
